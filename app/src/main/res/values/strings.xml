@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">QuizAPP</string>
+    <string name="empty"></string>
+    <string name="login_intro">Quiz App!</string>
+    <string name="login_hint">Name</string>
+    <string name="login_button">start</string>
+    <string name="question">Question 1</string>
+    <string name="A">dfssfsdsdfdsf</string>
+    <string name="B">Quisfdsfz App!</string>
+    <string name="C">Namefd dfds sfds fsdf</string>
+    <string name="D">staefsd ffds fsdfs frt</string>
+    <string name="quite">Quite Quiz</string>
+    <string name="question_1">1 dssf ldsfsdfsdkfksdfsdkfsmk fmdsfkdsfksdfl slmdkfkdsfm</string>
+    <string name="question_2">2 dssf ldsfsdfsdkfksdfsdkfsmk fmdsfkdsfksdfl slmdkfkdsfm</string>
+    <string name="question_3">3 dssf ldsfsd  fmdsf kdsfksdfl slmdk fkdsfm</string>
+    <string name="question_4">4 dssf ldsfsdfsdkfksdfsdkfsmk fmdsfkdsfksdfl slmdkfkdsfm</string>
+    <string name="question_5">5 dssf ldsfsdfsdkfksdfsdkfsmk fmdsfkdsfksdfl slmdkfkdsfm</string>
+    <string name="question_6">6 dssf ldsfsd  fmdsf kdsfksdfl slmdk fkdsfm</string>
+    <string name="question_7">7 dssf ldsfsdfsdkfksdfsdkfsmk fmdsfkdsfksdfl slmdkfkdsfm</string>
+    <string name="question_8">8 dssf ldsfsdfsdkfksdfsdkfsmk fmdsfkdsfksdfl slmdkfkdsfm</string>
+    <string name="question_9">9 dssf ldsfsd  fmdsf kdsfksdfl slmdk fkdsfm</string>
+
+</resources>
