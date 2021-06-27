@@ -1,4 +1,4 @@
-package com.aknrdlt.quizapp
+package com.aknrdlt.quizapp.question
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,8 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager.widget.ViewPager.OnPageChangeListener
+import com.aknrdlt.quizapp.R
+import com.aknrdlt.quizapp.login.MainActivity
 
 
 class QuestionActivity : AppCompatActivity() {
@@ -60,10 +62,18 @@ class QuestionActivity : AppCompatActivity() {
                     btnNext.visibility = View.VISIBLE
                 }else{
                     btnNext.text = "Finish"
+                    btnNext.setOnClickListener(){
+                        intent = Intent(this@QuestionActivity, ResultActivity::class.java)
+                        startActivity(intent);
+                    }
                 }
             }
 
             override fun onPageScrollStateChanged(state: Int) {}
         })
     }
+}
+
+class ResultActivity {
+
 }

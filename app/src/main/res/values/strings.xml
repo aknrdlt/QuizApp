@@ -19,5 +19,8 @@
     <string name="question_7">7 dssf ldsfsdfsdkfksdfsdkfsmk fmdsfkdsfksdfl slmdkfkdsfm</string>
     <string name="question_8">8 dssf ldsfsdfsdkfksdfsdkfsmk fmdsfkdsfksdfl slmdkfkdsfm</string>
     <string name="question_9">9 dssf ldsfsd  fmdsf kdsfksdfl slmdk fkdsfm</string>
-
+    <string name="your_score">Your score</string>
+    <string name="score">9</string>
+    <string name="name_1">John</string>
+    <string name="name_2">Donald</string>
 </resources>

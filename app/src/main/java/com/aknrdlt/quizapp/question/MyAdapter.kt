@@ -1,4 +1,4 @@
-package com.aknrdlt.quizapp
+package com.aknrdlt.quizapp.question
 
 import android.content.Context
 import android.content.Context.LAYOUT_INFLATER_SERVICE
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.viewpager.widget.PagerAdapter
+import com.aknrdlt.quizapp.R
 
 
 class MyAdapter(context: Context) : PagerAdapter() {
