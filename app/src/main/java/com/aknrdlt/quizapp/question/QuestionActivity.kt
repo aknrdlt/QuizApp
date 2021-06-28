@@ -63,7 +63,7 @@ class QuestionActivity : AppCompatActivity() {
                 }else{
                     btnNext.text = "Finish"
                     btnNext.setOnClickListener(){
-                        intent = Intent(this@QuestionActivity, ResultActivity::class.java)
+                        intent = Intent(this, ResultActivity::class.java)
                         startActivity(intent);
                     }
                 }

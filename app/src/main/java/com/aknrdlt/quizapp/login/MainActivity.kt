@@ -1,6 +1,5 @@
 package com.aknrdlt.quizapp.login
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -10,11 +9,8 @@ import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.aknrdlt.quizapp.question.QuestionActivity
 import com.aknrdlt.quizapp.R
-
-const val USERNAME = "name"
-const val SCORE = "9"
+import com.aknrdlt.quizapp.question.QuestionActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var btnLogin : Button
@@ -34,11 +30,6 @@ class MainActivity : AppCompatActivity() {
         sharedPreferences = getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE)
         isRemembered = sharedPreferences.getBoolean("CHECK", false)
 
-//        if (isRemembered){
-//            val intent = Intent(this, QuestionActivity::class.java)
-//            startActivity(intent);
-//            finish()
-//        }
         btnLogin.setOnClickListener(){
             if(nameText.text.toString() != ""){
                 val name : String = nameText.text.toString()
@@ -46,28 +37,18 @@ class MainActivity : AppCompatActivity() {
 
                 val editor : SharedPreferences.Editor = sharedPreferences.edit()
 
-                editor.putString("NAME", name)
-                editor.putBoolean("CHECKBOX", checked)
-                editor.apply()
+                if(isRemembered){
+                    editor.putString("NAME", name)
+                    editor.putBoolean("CHECKBOX", checked)
+                    editor.apply()
 
-                Toast.makeText(this, "Info saved!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Info saved!", Toast.LENGTH_SHORT).show()
+                }
 
                 val intent = Intent(this, QuestionActivity::class.java)
                 startActivity(intent);
                 finish()
             }
         }
-    }
-    private fun addFlower() {
-        val resultIntent = Intent()
-
-        if (nameText.text.isNullOrEmpty()) {
-            setResult(Activity.RESULT_CANCELED, resultIntent)
-        } else {
-            val name = nameText.text.toString()
-            resultIntent.putExtra(USERNAME, name)
-            setResult(Activity.RESULT_OK, resultIntent)
-        }
-        finish()
     }
 }
