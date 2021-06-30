@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.aknrdlt.quizapp.login.MainActivity
 
 class ResultActivity : AppCompatActivity() {
-
     lateinit var preferences : SharedPreferences
     lateinit var tv_name : TextView
     lateinit var b_logout : Button

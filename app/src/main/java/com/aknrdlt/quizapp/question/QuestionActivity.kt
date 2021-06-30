@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager.widget.ViewPager.OnPageChangeListener
 import com.aknrdlt.quizapp.R
+import com.aknrdlt.quizapp.ResultActivity
 import com.aknrdlt.quizapp.login.MainActivity
 
 
@@ -89,10 +90,10 @@ class QuestionActivity : AppCompatActivity() {
                     btnNext.visibility = View.VISIBLE
                 }else{
                     btnNext.text = "Finish"
-//                    btnNext.setOnClickListener(){
-//                        val intent1 = Intent(this@QuestionActivity, ResultActivity::class.java)
-//                        startActivity(intent1);
-//                    }
+                    btnNext.setOnClickListener(){
+                        val intent1 = Intent(this@QuestionActivity, ResultActivity::class.java)
+                        startActivity(intent1);
+                    }
                 }
             }
 
