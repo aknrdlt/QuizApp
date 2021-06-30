@@ -1,6 +1,5 @@
 package com.aknrdlt.quizapp
 
-
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -9,7 +8,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.aknrdlt.quizapp.login.MainActivity
 
-class FlowersListActivity : AppCompatActivity() {
+class ResultActivity : AppCompatActivity() {
 
     lateinit var preferences : SharedPreferences
     lateinit var tv_name : TextView

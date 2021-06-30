@@ -4,11 +4,11 @@ package com.aknrdlt.quizapp.data
 import android.content.res.Resources
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.aknrdlt.quizapp.flowerList
+import com.aknrdlt.quizapp.usersList
 
 /* Handles operations on flowersLiveData and holds details about it. */
 class DataSource(resources: Resources) {
-    private val initialFlowerList = flowerList(resources)
+    private val initialFlowerList = usersList(resources)
     private val flowersLiveData = MutableLiveData(initialFlowerList)
 
     /* Adds flower to liveData and posts value. */

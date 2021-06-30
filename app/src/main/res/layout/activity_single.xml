@@ -39,7 +39,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:checked="true"
+                android:checked="false"
                 android:gravity="left|end"
                 android:layoutDirection="rtl"
                 android:singleLine="false"
@@ -53,6 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="15dp"
+                android:checked="false"
                 android:gravity="left"
                 android:layoutDirection="rtl"
                 android:text="@string/B"
@@ -61,15 +62,15 @@
 
             <RadioButton
                 android:id="@+id/optionC"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:checked="true"
+                android:checked="false"
                 android:gravity="left"
                 android:layoutDirection="rtl"
                 android:text="@string/C"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="16dp" />
 
             <RadioButton
                 android:id="@+id/optionD"

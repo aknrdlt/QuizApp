@@ -2,19 +2,24 @@ package com.aknrdlt.quizapp.question
 
 import android.content.Context
 import android.content.Context.LAYOUT_INFLATER_SERVICE
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import android.widget.RadioButton
+import android.widget.RadioGroup
 import android.widget.TextView
 import androidx.viewpager.widget.PagerAdapter
 import com.aknrdlt.quizapp.R
+import com.aknrdlt.quizapp.data.Question
+import com.aknrdlt.quizapp.data.Questions
 
 
 class MyAdapter(context: Context) : PagerAdapter() {
     var context: Context
     var inflater: LayoutInflater? = null
-    // list judul
+
     var list_judul = intArrayOf(
         R.string.question_1,
         R.string.question_2,
@@ -38,10 +43,15 @@ class MyAdapter(context: Context) : PagerAdapter() {
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         inflater = context.getSystemService(LAYOUT_INFLATER_SERVICE) as LayoutInflater?
         val view: View = inflater?.inflate(R.layout.activity_single, container, false)!!
-        val question: TextView = view.findViewById(R.id.tv_question)
-        question.setText(list_judul[position])
+
         val question_number: TextView = view.findViewById(R.id.tv_question_number)
         question_number.setText("Question ${position + 1}")
+
+        val question: TextView = view.findViewById(R.id.tv_question)
+        val questionList = Questions.questionsList()
+        Log.i("QS", questionList.toString())
+        question.setText(questionList[position].question)
+
         container.addView(view)
         return view
     }
