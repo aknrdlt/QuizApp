@@ -9,84 +9,84 @@ object Questions {
         return listOf(
             Question(
                 id = 1,
-                question = "11111111111111",
-                optionA = "1111AAAAAAAAA",
-                optionB = "1111BBBBBBBBBB",
-                optionC = "111111ccccc",
-                optionD = "11111BBBBBBB",
-                correctAnswer = "1111AAAAAAAAA"
+                question = "Sheep, Lord of the rings, rugby",
+                optionA = "Australia",
+                optionB = "New Zealand",
+                optionC = "Scotland",
+                optionD = "Sweden",
+                correctAnswer = "New Zealand"
             ),
             Question(
                 id = 2,
-                question = "2222222222222",
-                optionA = "2222222AAAAAAAAA",
-                optionB = "2222BBBBBBBB",
-                optionC = "22222CCCCCCCC",
-                optionD = "22222DDDDDDD",
-                correctAnswer = "2222BBBBBBBB"
+                question = "Syrup, moose, hockey",
+                optionA = "Cuba",
+                optionB = "Turkey",
+                optionC = "US",
+                optionD = "Canada",
+                correctAnswer = "Canada"
             ),
             Question(
                 id = 3,
-                question = "11111111111111",
-                optionA = "1111AAAAAAAAA",
-                optionB = "1111BBBBBBBBBB",
-                optionC = "111111ccccc",
-                optionD = "11111BBBBBBB",
-                correctAnswer = "111111ccccc"
+                question = "Louvre, macarons, romance",
+                optionA = "Mexico",
+                optionB = "Australia",
+                optionC = "Malaysia",
+                optionD = "France",
+                correctAnswer = "France"
             ),
             Question(
                 id = 4,
-                question = "11111111111111",
-                optionA = "1111AAAAAAAAA",
-                optionB = "1111BBBBBBBBBB",
-                optionC = "111111ccccc",
-                optionD = "11111BBBBBBB",
-                correctAnswer = "1111AAAAAAAAA"
+                question = "Chocolate, Red Devils, football",
+                optionA = "Morocco",
+                optionB = "Afghanistan",
+                optionC = "Thailand",
+                optionD = "Belgium",
+                correctAnswer = "Belgium"
             ),
             Question(
                 id = 5,
-                question = "11111111111111",
-                optionA = "1111AAAAAAAAA",
-                optionB = "1111BBBBBBBBBB",
-                optionC = "111111ccccc",
-                optionD = "11111BBBBBBB",
-                correctAnswer = "111111ccccc"
+                question = "Vodka, Hermitage, cold",
+                optionA = "Iceland",
+                optionB = "Greenland",
+                optionC = "Brazil",
+                optionD = "Russia",
+                correctAnswer = "Russia"
             ),
             Question(
                 id = 6,
-                question = "11111111111111",
-                optionA = "1111AAAAAAAAA",
-                optionB = "1111BBBBBBBBBB",
-                optionC = "111111ccccc",
-                optionD = "11111BBBBBBB",
-                correctAnswer = "111111ccccc"
+                question = "Pyramids, hot weather, Sahara Desert",
+                optionA = "Turkey",
+                optionB = "Pakistan",
+                optionC = "Malaysia",
+                optionD = "Egypt",
+                correctAnswer = "Egypt"
             ),
             Question(
                 id = 7,
-                question = "11111111111111",
-                optionA = "1111AAAAAAAAA",
-                optionB = "1111BBBBBBBBBB",
-                optionC = "111111ccccc",
-                optionD = "11111BBBBBBB",
-                correctAnswer = "111111ccccc"
+                question = "Colosseum, Rome, Venice",
+                optionA = "Yemen",
+                optionB = "Algeria",
+                optionC = "Australia",
+                optionD = "Italy",
+                correctAnswer = "Italy"
             ),
             Question(
                 id = 8,
-                question = "11111111111111",
-                optionA = "1111AAAAAAAAA",
-                optionB = "1111BBBBBBBBBB",
-                optionC = "111111ccccc",
-                optionD = "11111BBBBBBB",
-                correctAnswer = "111111ccccc"
+                question = "Hollywood, Grand Canyon, NASA",
+                optionA = "US",
+                optionB = "Canada",
+                optionC = "Barbados",
+                optionD = "Brazil",
+                correctAnswer = "US"
             ),
             Question(
                 id = 9,
-                question = "11111111111111",
-                optionA = "1111AAAAAAAAA",
-                optionB = "1111BBBBBBBBBB",
-                optionC = "111111ccccc",
-                optionD = "11111BBBBBBB",
-                correctAnswer = "11111BBBBBBB"
+                question = "Big Ben, Buckingham palace, black pudding",
+                optionA = "Austrailia",
+                optionB = "Yemen",
+                optionC = "England",
+                optionD = "New Zealand",
+                correctAnswer = "England"
             )
         )
     }
