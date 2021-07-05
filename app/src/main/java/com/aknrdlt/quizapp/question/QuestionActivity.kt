@@ -43,7 +43,7 @@ class QuestionActivity : AppCompatActivity() {
                 val radioButton: RadioButton? = findViewById(radioId!!)
 
                 val questionList = Questions.questionsList()
-                if(radioButton?.text.toString().equals(questionList[page].correctAnswer)){
+                if(radioButton?.text.toString() == questionList[page - 1].correctAnswer){
                     numberOfCorrectAnswers++;
                 }
             }
