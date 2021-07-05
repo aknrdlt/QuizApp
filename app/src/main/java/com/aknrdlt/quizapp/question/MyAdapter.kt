@@ -2,6 +2,7 @@ package com.aknrdlt.quizapp.question
 
 import android.content.Context
 import android.content.Context.LAYOUT_INFLATER_SERVICE
+import android.content.SharedPreferences
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -20,20 +21,9 @@ class MyAdapter(context: Context) : PagerAdapter() {
     var context: Context
     var inflater: LayoutInflater? = null
 
-    var list_judul = intArrayOf(
-        R.string.question_1,
-        R.string.question_2,
-        R.string.question_3,
-        R.string.question_4,
-        R.string.question_5,
-        R.string.question_6,
-        R.string.question_7,
-        R.string.question_8,
-        R.string.question_9
-    )
-
     override fun getCount(): Int {
-        return list_judul.size
+        // yeah proooblem))
+        return Questions.questionsList().size
     }
 
     override fun isViewFromObject(view: View, `object`: Any): Boolean {
@@ -49,8 +39,16 @@ class MyAdapter(context: Context) : PagerAdapter() {
 
         val question: TextView = view.findViewById(R.id.tv_question)
         val questionList = Questions.questionsList()
-        Log.i("QS", questionList.toString())
         question.setText(questionList[position].question)
+
+        val optionA: TextView = view.findViewById(R.id.optionA)
+        val optionB: TextView = view.findViewById(R.id.optionB)
+        val optionC: TextView = view.findViewById(R.id.optionC)
+        val optionD: TextView = view.findViewById(R.id.optionD)
+        optionA.setText(questionList[position].optionA)
+        optionB.setText(questionList[position].optionB)
+        optionC.setText(questionList[position].optionC)
+        optionD.setText(questionList[position].optionD)
 
         container.addView(view)
         return view

@@ -15,7 +15,6 @@ import com.aknrdlt.quizapp.question.QuestionActivity
 class MainActivity : AppCompatActivity() {
     private lateinit var btnLogin : Button
     private lateinit var sharedPreferences : SharedPreferences
-    var isRemembered = false
     private lateinit var nameText : EditText
     private lateinit var checkBox : CheckBox
 
@@ -28,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         checkBox = findViewById(R.id.cb_login)
 
         sharedPreferences = getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE)
-        isRemembered = sharedPreferences.getBoolean("CHECK", false)
 
         btnLogin.setOnClickListener(){
             if(nameText.text.toString() != ""){
@@ -37,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
                 val editor : SharedPreferences.Editor = sharedPreferences.edit()
 
-                if(isRemembered){
+                if(checked){
                     editor.putString("NAME", name)
                     editor.putBoolean("CHECKBOX", checked)
                     editor.apply()

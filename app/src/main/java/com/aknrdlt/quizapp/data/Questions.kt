@@ -14,7 +14,7 @@ object Questions {
                 optionB = "1111BBBBBBBBBB",
                 optionC = "111111ccccc",
                 optionD = "11111BBBBBBB",
-                correctAnswer = 1
+                correctAnswer = "1111AAAAAAAAA"
             ),
             Question(
                 id = 2,
@@ -23,7 +23,7 @@ object Questions {
                 optionB = "2222BBBBBBBB",
                 optionC = "22222CCCCCCCC",
                 optionD = "22222DDDDDDD",
-                correctAnswer = 1
+                correctAnswer = "2222BBBBBBBB"
             ),
             Question(
                 id = 3,
@@ -32,7 +32,7 @@ object Questions {
                 optionB = "1111BBBBBBBBBB",
                 optionC = "111111ccccc",
                 optionD = "11111BBBBBBB",
-                correctAnswer = 1
+                correctAnswer = "111111ccccc"
             ),
             Question(
                 id = 4,
@@ -41,7 +41,7 @@ object Questions {
                 optionB = "1111BBBBBBBBBB",
                 optionC = "111111ccccc",
                 optionD = "11111BBBBBBB",
-                correctAnswer = 1
+                correctAnswer = "1111AAAAAAAAA"
             ),
             Question(
                 id = 5,
@@ -50,7 +50,7 @@ object Questions {
                 optionB = "1111BBBBBBBBBB",
                 optionC = "111111ccccc",
                 optionD = "11111BBBBBBB",
-                correctAnswer = 1
+                correctAnswer = "111111ccccc"
             ),
             Question(
                 id = 6,
@@ -59,7 +59,7 @@ object Questions {
                 optionB = "1111BBBBBBBBBB",
                 optionC = "111111ccccc",
                 optionD = "11111BBBBBBB",
-                correctAnswer = 1
+                correctAnswer = "111111ccccc"
             ),
             Question(
                 id = 7,
@@ -68,7 +68,7 @@ object Questions {
                 optionB = "1111BBBBBBBBBB",
                 optionC = "111111ccccc",
                 optionD = "11111BBBBBBB",
-                correctAnswer = 1
+                correctAnswer = "111111ccccc"
             ),
             Question(
                 id = 8,
@@ -77,7 +77,7 @@ object Questions {
                 optionB = "1111BBBBBBBBBB",
                 optionC = "111111ccccc",
                 optionD = "11111BBBBBBB",
-                correctAnswer = 1
+                correctAnswer = "111111ccccc"
             ),
             Question(
                 id = 9,
@@ -86,7 +86,7 @@ object Questions {
                 optionB = "1111BBBBBBBBBB",
                 optionC = "111111ccccc",
                 optionD = "11111BBBBBBB",
-                correctAnswer = 1
+                correctAnswer = "11111BBBBBBB"
             )
         )
     }

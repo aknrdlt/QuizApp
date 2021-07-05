@@ -6,15 +6,13 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Button
-import android.widget.RadioButton
-import android.widget.RadioGroup
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager.widget.ViewPager.OnPageChangeListener
 import com.aknrdlt.quizapp.R
 import com.aknrdlt.quizapp.ResultActivity
+import com.aknrdlt.quizapp.data.Questions
 import com.aknrdlt.quizapp.login.MainActivity
 
 
@@ -24,43 +22,30 @@ class QuestionActivity : AppCompatActivity() {
     private lateinit var adapter : MyAdapter
     private lateinit var btnNext: Button
     private lateinit var quiteQuiz: TextView
-    private val TAG = QuestionActivity::class.java.simpleName
     private lateinit var sharedPreferences : SharedPreferences
-
-    val map : MutableMap<Int, String> = mutableMapOf()
+    var numberOfCorrectAnswers : Int = 0
     var page = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_question)
-        sharedPreferences = getSharedPreferences("RADIO_BUTTON", Context.MODE_PRIVATE);
-
+        sharedPreferences = getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE)
 
         setupViewPager();
 
         btnNext = findViewById(R.id.b_next)
 
         btnNext.setOnClickListener(){
-            viewPager.setCurrentItem(viewPager.getCurrentItem() + 1, true);
+            viewPager.setCurrentItem(viewPager.getCurrentItem() + 1, true)
 
             val radio_group: RadioGroup? = findViewById(R.id.radioGroup)
             val radioId : Int? = radio_group?.getCheckedRadioButtonId()
-            val lastButtonState : Boolean = sharedPreferences.getBoolean("BUTTON_STATE", false)
-            // restore previous state
-            if (radioId != null){
+            if(radioId != null){
                 val radioButton: RadioButton? = findViewById(radioId!!)
-                radioButton?.setChecked(lastButtonState)
 
-                val editor: SharedPreferences.Editor = sharedPreferences.edit()
-                val isChecked: Boolean = radioButton?.isChecked() == true
-                // use this to add the new state
-                // use this to add the new state
-                editor.putBoolean("BUTTON_STATE", isChecked)
-                // save
-                // save
-                editor.apply()
-                map.put(page, radioButton?.text.toString())
-
-                Log.d(TAG, map.toString() + "fffffffffffffffffffffffffffffffffffff")
+                val questionList = Questions.questionsList()
+                if(radioButton?.text.toString().equals(questionList[page].correctAnswer)){
+                    numberOfCorrectAnswers++;
+                }
             }
         }
 
@@ -91,8 +76,12 @@ class QuestionActivity : AppCompatActivity() {
                 }else{
                     btnNext.text = "Finish"
                     btnNext.setOnClickListener(){
+                        val editor : SharedPreferences.Editor = sharedPreferences.edit()
+                        editor.putString("SCORE", numberOfCorrectAnswers.toString())
+                        editor.apply()
+
                         val intent1 = Intent(this@QuestionActivity, ResultActivity::class.java)
-                        startActivity(intent1);
+                        startActivity(intent1)
                     }
                 }
             }

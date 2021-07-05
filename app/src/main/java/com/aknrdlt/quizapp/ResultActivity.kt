@@ -10,8 +10,9 @@ import com.aknrdlt.quizapp.login.MainActivity
 
 class ResultActivity : AppCompatActivity() {
     lateinit var preferences : SharedPreferences
-    lateinit var tv_name : TextView
-    lateinit var b_logout : Button
+    lateinit var tvName : TextView
+    lateinit var tvScore : TextView
+    lateinit var bLogout : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,13 +21,16 @@ class ResultActivity : AppCompatActivity() {
         preferences = getSharedPreferences("SHARED_PREF", MODE_PRIVATE)
 
         val name = preferences.getString("NAME", "")
+        val score = preferences.getString("SCORE", "")
 
-        tv_name = findViewById(R.id.tv_your_score)
-        b_logout = findViewById(R.id.b_logout)
+        tvName = findViewById(R.id.tv_your_score)
+        bLogout = findViewById(R.id.b_logout)
+        tvScore = findViewById(R.id.tv_score)
 
-        tv_name.text = name + ", your score"
+        tvName.text = name + ", your score"
+        tvScore.text = score
 
-        b_logout.setOnClickListener(){
+        bLogout.setOnClickListener(){
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent);
         }
