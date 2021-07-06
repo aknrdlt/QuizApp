@@ -4,14 +4,13 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager.widget.ViewPager.OnPageChangeListener
 import com.aknrdlt.quizapp.R
-import com.aknrdlt.quizapp.ResultActivity
+import com.aknrdlt.quizapp.result.ResultActivity
 import com.aknrdlt.quizapp.data.Questions
 import com.aknrdlt.quizapp.login.MainActivity
 
