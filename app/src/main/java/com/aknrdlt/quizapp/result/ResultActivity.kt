@@ -52,7 +52,7 @@ class ResultActivity : AppCompatActivity() {
 
     private fun loadUsers() {
         val users: MutableList<User> = Users.usersList()
-        users.add(User(4, preferences.getString("NAME", "").toString(), 4))
+        users.add(User(4, preferences.getString("NAME", "").toString(), preferences.getString("SCORE", "").toString().toInt()))
         userListAdapter?.setItems(users)
     }
 

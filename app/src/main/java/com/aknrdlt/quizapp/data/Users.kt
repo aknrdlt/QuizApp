@@ -15,7 +15,7 @@ object Users {
                 id = 2,
                 name = "Zhakoo",
                 score = 6
-            ),
+            )
         )
     }
 }
