@@ -17,8 +17,7 @@ import com.aknrdlt.quizapp.data.Question
 import com.aknrdlt.quizapp.data.Questions
 
 
-class MyAdapter(context: Context) : PagerAdapter() {
-    var context: Context
+class MyAdapter(private var context: Context) : PagerAdapter() {
     var inflater: LayoutInflater? = null
 
     override fun getCount(): Int {

@@ -36,7 +36,6 @@ class ResultActivity : AppCompatActivity() {
         tvName = findViewById(R.id.tv_your_score)
         bLogout = findViewById(R.id.b_logout)
         tvScore = findViewById(R.id.tv_score)
-
         tvName.text = name + ", your score"
         tvScore.text = score
 

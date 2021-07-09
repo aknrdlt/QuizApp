@@ -8,12 +8,12 @@ object Users {
         return mutableListOf(
             User(
                 id = 1,
-                name = "Akooo",
+                name = "Brad",
                 score = 7
             ),
             User(
                 id = 2,
-                name = "Zhakoo",
+                name = "John",
                 score = 6
             )
         )

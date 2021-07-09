@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
@@ -37,12 +38,11 @@ class MainActivity : AppCompatActivity() {
 
                 if(checked){
                     editor.putString("NAME", name)
-                    editor.putBoolean("CHECKBOX", checked)
+                    editor.putBoolean("CHECKBOX", true)
                     editor.apply()
 
                     Toast.makeText(this, "Info saved!", Toast.LENGTH_SHORT).show()
                 }
-
                 val intent = Intent(this, QuestionActivity::class.java)
                 startActivity(intent);
                 finish()
